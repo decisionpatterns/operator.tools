@@ -1,0 +1,74 @@
+\name{operator.type}
+
+\alias{operator.type}
+\alias{operator.type.name}
+\alias{operator.type.function}
+
+\title{
+  Return the type for an operator.
+}
+\description{
+  Given an operator or its name/symbol, return the \bold{type} of 
+  operator.  
+}
+
+\usage{
+  operator.type(op)
+}
+
+\arguments{
+  \item{op}{An operator either as a name/symbol or function. }
+}
+
+\details{
+  The operator is first checked against all operators that have
+  been registered with the \code{\link{setOperator}} command.
+  If there is a match, its type is returned. If no matching operator
+  is found, \code{op} is matched against unregistered operators that
+  have been defined with the \code{\%any\%}-syntax. If a match is found,
+  UNREGISTERED is returned.    
+
+  The list of operators are maintained in \code{.Options$operators} and 
+  be altered suing the \code{\link{setOperator}} command.
+
+}
+
+\value{
+  A \code{character} value. 
+
+  For registered operators, the registered
+  type is returned.  For Base R operators, the types come from 
+  \code{\link[base]{Syntax}}. 
+
+  For operators defined with the \code{\%any\%}-syntax but, not
+  registered using \code{\link{setOperator}}, "UNREGISTERED" is 
+  returned.  
+
+  NULL is returned otherwise.  
+}
+
+\author{
+  Christopher Brown
+}
+
+\seealso{
+  \code{\link{operators}}, \code{\link{setOperator}}. \link{Syntax}
+}
+
+\examples{
+
+ \dontrun{
+  operator.type( `+` )
+  operator.type( `<=` )
+  
+  e <- quote( A +B )
+  operator.type( e[[1]] )
+
+  operator.type( as.name('+') )
+ }
+ 
+}
+
+\keyword{ utilities }
+\keyword{ manip } 
+\keyword{ methods }

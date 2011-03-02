@@ -1,0 +1,23 @@
+2010-09-28 Version 1.1.1
+ - R/inverse.R: fixed bug that produced error on dispatch.
+
+2010-09-24 Version 1.1.0
+ - R/zzz.R: greatly simplified .onAttach()
+ + R/odg.R: added
+ - Removed inst/options:  Options are not defined in .initOps in R/init.R
+ - R/init.R: Added definition for !=
+ + R/rel.type.R: Added rel.type.call function.
+
+
+2010-07-18 Version 1.0.0
+ - R/operator.type.R: Only registered operators are checked against a 
+   type.
+ - Various documentation tweaks.
+ - Added optimization to search REGISTERED before UNREGISTERED operators
+   in various functions
+ - R/fun2name.R: Added name2fun
+
+
+2010-07-16 Version 0.2.0 
+ - First CRAN Release
+

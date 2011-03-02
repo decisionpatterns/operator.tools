@@ -1,0 +1,37 @@
+ 
+ - extend so that %in% works for class name
+         > as.character( op(x) ) %in% c( '==', '%in%' )
+         [1] TRUE
+         > x
+         Species %in% c("setosa", "versicolor", "virginica")
+         > as.character( op(x) ) %in% c( '==', '%in%' )
+         [1] TRUE
+         > op(x)  %in% c( '==', '%in%' )
+         Error in match(x, table, nomatch = 0L) : 
+           'match' requires vector arguments
+           > class(op(x))
+           [1] "name"
+
+ - operators class?
+
+ - There seems to be some friction with rel.type function and expressions
+   this could work better.
+
+ ? extend operators package
+   probably in R/zzz.R: .First.lib function
+
+ ? Can operators have multiple types?
+
+ ? operator/operators class? 
+
+ ? setInverse for adding to altering .Options$operators.inverse
+
+ ? fun2name: Move to function.tools
+   
+
+# ------------------------------------------------------
+# COMPLETED:
+# ------------------------------------------------------
+x fun2name: given the function, it identifies the .name
+   function (e1, e2)  .Primitive(">=") >===>  >=
+   

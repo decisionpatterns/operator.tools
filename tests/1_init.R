@@ -1,5 +1,5 @@
-
 library(testthat) 
+library(operator.tools)
 context("Initialization Tests")
 
 

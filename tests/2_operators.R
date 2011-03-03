@@ -1,4 +1,5 @@
 library(testthat)
+library(operator.tools)
 
 context( 'Function: is.operator' )
 for( op in operators() ) 

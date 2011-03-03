@@ -6,7 +6,7 @@
     pkgname ,
     "-" ,
     utils::installed.packages()[ pkgname , "Version"],
-    "provided by Decision Patterns\n\n" ,
+    " provided by Decision Patterns\n\n" ,
     sep = ""
   )
 

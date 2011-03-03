@@ -5,7 +5,7 @@
   cat(
     pkgname ,
     "-" ,
-    installed.packages()[ pkgname , "Version"],
+    utils::installed.packages()[ pkgname , "Version"],
     " written by Decision Patterns\n\n" ,
     sep = ""
   )

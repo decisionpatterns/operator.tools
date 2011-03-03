@@ -1,4 +1,13 @@
- 
+ - Create 'function.tools' package    
+   - extend as.name, as.function, as.character, as.operator, etc.
+     to replace fun2name, name2fun, etc.
+   - create options('functions') to contain metadata for functions
+
+ - THEN: 
+   - create 'operator.tools::operators' classes that extends function
+
+ - refactor so functions can work on collection objects/lists
+
  - extend so that %in% works for class name
          > as.character( op(x) ) %in% c( '==', '%in%' )
          [1] TRUE
@@ -12,22 +21,15 @@
            > class(op(x))
            [1] "name"
 
- - operators class?
 
  - There seems to be some friction with rel.type function and expressions
    this could work better.
 
- ? extend operators package
-   probably in R/zzz.R: .First.lib function
-
- ? Can operators have multiple types?
-
- ? operator/operators class? 
+ ? Can operators have multiple types?  This might happen with overloading
+   since operators are special functions with two or more arguments.
 
  ? setInverse for adding to altering .Options$operators.inverse
 
- ? fun2name: Move to function.tools
-   
 
 # ------------------------------------------------------
 # COMPLETED:
@@ -35,3 +37,4 @@
 x fun2name: given the function, it identifies the .name
    function (e1, e2)  .Primitive(">=") >===>  >=
    
+

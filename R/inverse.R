@@ -1,39 +1,46 @@
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # inverse
 #   inverses the operators expressed as a name, a function or in an 
-#    expression
+#   expression. 
+#     
 # 
-# ------------------------------------------------------------------------------
+# ----------------------------------------------------------------------
 
-# Before declaring a new generic function we check to see if it exists.
+# Before declaring a new generic function we check to see if it 
+# already exists.  
 inverse <- function(x, ... ) 
   UseMethod( 'inverse' ) 
 
 inverse.name <- function(x, ...) {
+  
   op <- as.character(x)
   inverses <- sapply( .Options$operators, function(x) x$inverse )
+  # inverses <- inverses[ ! sapply( inverses, is.null ) ] 
 
-  if( op %in% names(inverses) ) {
-    return( as.name( inverses[[ op ]] ))
-  } else  {
-    warning( "No inverse found for op: ", op, call.=FALSE )
-  }
+  ret <- inverses[[ op ]]
+  if( ! is.null(ret) ) return( as.name(ret) ) 
 
-  return(NULL)
+  # if( op %in% names(inverses) ) {
+ #   return( as.name( inverses[[ op ]] ))
+ # } else  {
+  warning( "No inverse found for op: ", op, call.=FALSE )
+  # }
+
+  return(ret)
 }
 
 
+# FUNCTION: inverse.function
+#  convert to name, find inverse, c:onvert to function.
 inverse.function <- function(x, ...) {
 
   inverses <- sapply( .Options$operators, function(x) x$inverse )
 
-  return( inverses[[fun2name(x)]] )
+  return( name2fun( as.name(inverses[[fun2name(x)]]) ) )
   warning( "No operator matched" )
   return( NULL )
 
 }
-
-
 
 
 

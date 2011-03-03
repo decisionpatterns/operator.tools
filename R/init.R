@@ -1,3 +1,4 @@
+# This sets up the operators.
 .initOps <- function() {
 
   setOperator( '::',  type = 'namespace' )

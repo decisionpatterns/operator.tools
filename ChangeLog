@@ -1,3 +1,20 @@
+2011-03-02 Version 1.2.0
+ - Moved to git repository
+ - TODO: updated
+ - DESCRIPTION: 
+   - changed version number, author and maintainer
+   - removed dependency on Runit for testthat
+ - tests/
+   - 1_init.R: Added 
+   - 2_is.operator.R: Added
+   - 3_inverse.R: Added
+ - R/
+   - odg.R: deleted
+   - zzz.R: removed old anouncement 
+   - inverse.R:  
+     - inverse.function: now properly returns a function
+   - fun2name.R: name2fun properly returns a function
+
 2010-09-28 Version 1.1.1
  - R/inverse.R: fixed bug that produced error on dispatch.
 

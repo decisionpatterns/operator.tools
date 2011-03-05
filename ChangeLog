@@ -1,4 +1,4 @@
-2011-03-02 Version 1,2.0
+2011-03-02 Version 1,2.1
  - tests/: 
    - fixed all tests
    - 2_operators.R renamed from 2_is.operators.R, it didn't work 

@@ -1,3 +1,11 @@
+ - There is some confusion about the SPECIAL CLASS of operators, ie. 
+   registered, unregistered, etc., and it's type, i.e. logical arithmetic
+   ...
+   we should factor this out and call it: domain 
+
+ - Relational operators are also logical.
+   operators might have more than one type and have an inheritance behavior
+
  - Create 'function.tools' package    
    - extend as.name, as.function, as.character, as.operator, etc.
      to replace fun2name, name2fun, etc.

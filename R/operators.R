@@ -1,9 +1,9 @@
 # ---------------------------------------------------------------------
 # Function: operators
 #   Returns a current character vector of _defined_ operators.
-#   
-#    REG(ISTERED): (DEFAULT) operators defined in base R or by calling setOperator
-#                  or setOperators
+#   `
+#    REG(ISTERED): (DEFAULT) operators defined in base R or by calling 
+#                  setOperator or setOperators
 #  UNREG(ISTERED): operators that are defined but not registered
 #         SPECIAL: those defined with the special %any% Syntax
 #             ALL: REG+UNREG 

@@ -19,10 +19,10 @@ operator.type <- function(op)
 operator.type.name <- function(op) {
   op <- as.character( deparse( op ) ) 
 
-  if( op %in% operators(type="REG") )
+  if( op %in% operators(types="REG") )
     return( .Options$operators[[op]]$type )
  
-  if( op %in% operators(type="UNREG") )
+  if( op %in% operators(types="UNREG") )
     return( "UNREGISTERED" ) 
 
   return(NULL)
@@ -32,14 +32,14 @@ operator.type.name <- function(op) {
 operator.type.function <- function(op) {
 
   # REGISTERED OPERATORS
-    li.fun <- sapply( operators( type="REG"), function(x) eval(as.name(x) ) )
+    li.fun <- sapply( operators( types="REG"), function(x) eval(as.name(x) ) )
 
     for( nm in names(li.fun) ) 
       if( identical( op, li.fun[[nm]] ) ) return( operator.type( as.name(nm)) )
 
 
   # UNREGISTERED OPERATORS
-    li.fun <- sapply( operators( type="UNREG"), function(x) eval(as.name(x) ) )
+    li.fun <- sapply( operators( types="UNREG"), function(x) eval(as.name(x) ) )
 
     for( nm in names(li.fun) ) 
       if( identical( op, li.fun[[nm]] ) ) return( "UNREGISTERED" )

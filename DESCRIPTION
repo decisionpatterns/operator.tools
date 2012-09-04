@@ -1,10 +1,11 @@
 Package: operator.tools
 Type: Package
 Title: Utilities for working with R's operators 
-Version: 1.2.1
-Date: 2011-03-02
+Version: 1.2.2
+Date: 2012-09-03
 Author: Christopher Brown
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
+Depends: utils
 Suggests: operators, testthat 
 Description: Utilities for working with R's operators
 License: GPL-2

@@ -21,7 +21,7 @@
   setOperator( '%/%', type = 'arithmetic' )
 
 
-  setOperator( '<',    type = c('relational','logical'), inverse = '>=', rel.type = 'lt' )
+  setOperator( '<',    type = 'relational', inverse = '>=', rel.type = 'lt' )
   setOperator( '<=',   type = 'relational', inverse = '>',  rel.type = 'lt' )
   setOperator( '>',    type = 'relational', inverse = '<=', rel.type = 'gt' )
   setOperator( '>=',   type = 'relational', inverse = '<',  rel.type = 'gt' )

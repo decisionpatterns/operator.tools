@@ -30,7 +30,8 @@ rel.type.call <- function(x)
     NULL
 
   
-  
+rel.type.expression <- function(x) 
+  sapply(x,rel.type)  
 
 
 

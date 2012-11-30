@@ -1,2 +1,3 @@
 ## Utility functions
 exportPattern("^[^\\.]")
+export("%!in%")

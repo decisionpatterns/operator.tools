@@ -4,6 +4,7 @@
 \alias{rel.type.function}
 \alias{rel.type.name}
 \alias{rel.type.call}
+\alias{rel.type.expression}
 
 \title{
   Get the relational type of a relational operator. 

@@ -1,4 +1,5 @@
-# This sets up the operators.
+#' Initialize operators 
+#' @rdname initOps
 .initOps <- function() {
 
   setOperator( '::',  type = 'namespace' )
@@ -52,4 +53,3 @@
   setOperator( '%o%', type = 'matrix' )
 
 }
-

@@ -1,6 +1,8 @@
+
 library(testthat)
-library(operator.tools)
-context( "Function: inverse" )
+library(magrittr)
+
+context( "inverse by name" )
   
 # inverse names
   expect_equal( inverse( as.name('+') ), as.name('-') )
@@ -14,15 +16,23 @@ context( "Function: inverse" )
   expect_equal( inverse( as.name('>=') ), as.name('<') )
 
 
-# inverse functions 
-  expect_equal( inverse(`+`), eval(`-`) )
-  expect_equal( inverse(`-`), eval(`+`) )
-  expect_equal( inverse(`*`), eval(`/`) )
-  expect_equal( inverse(`/`), eval(`*`) )
 
-  expect_equal( inverse(`<`), eval(`>=`) )
-  expect_equal( inverse(`<=`), eval(`>`) )
-  expect_equal( inverse(`>`), eval(`<=`) )
-  expect_equal( inverse(`>=`), eval(`<`) )
 
+context('inverse by function definition' )
+
+  inverse( `==` )  %>% expect_identical( `!=` )  
+  inverse( `!=` )  %>% expect_identical( `==` )
+
+  inverse( `%in%` ) %>% expect_identical( `%!in%` )
+  inverse( `%!in%` ) %>% expect_identical( `%in%` )
+
+  inverse( `>` )   %>% expect_identical( `<=` )  
+  inverse( `>=` )  %>% expect_identical( `<` )
+  inverse( `<` )   %>% expect_identical( `>=` )
+  inverse( `<=` )  %>% expect_identical( `>` )
+  
+  inverse( `+` ) %>% expect_identical( `-` )
+  inverse( `-` ) %>% expect_identical( `+` )
+  inverse( `*` ) %>% expect_identical( `/` )
+  inverse( `/` ) %>% expect_identical( `*` )
   

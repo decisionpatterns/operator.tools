@@ -1,16 +1,44 @@
-# ----------------------------------------------------------------------
-# inverse
-#   inverses the operators expressed as a name, a function or in an 
-#   expression. 
-#     
-# 
-# ----------------------------------------------------------------------
+#' Invert an R operator
+#' 
+#' \code{inverse} is a S3 generic method for inverting an R operator in the
+#' mathematical sense. Presently, inverses are defined for relational
+#' operators, i.e. changing \code{>} to \code{<=} etc.
+#' 
+#' Arguments will be checked against the defined list of inverses,
+#' If an entry exists, the corresponding inverse is returned.
+#' 
+#' @name inverse
+#' 
+#' @aliases inverse inverse inverse.name inverse.function
+#' 
+#' @param x object representing an R operator
+#' @param ... additional arguments 
+#' 
+#' @return 
+#'   \code{inverse} returns the inverse in the same form as the \code{x}
+#'   argument. Thus, if a name is provided, a name is returned. If a function is
+#'   provided, a function is returned.
+#'   
+#' @author Christopher Brown
+#' 
+#' @seealso 
+#'   \code{\link{operators}} especially \code{operators(type="relational"))}
+#'   
+#' @references http://en.wikipedia.org/wiki/Inverse_mathematics.
+#' 
+#' @keywords methods symbolmath utilities
+#' 
+#' @examples
+#'   \dontrun{
+#'     inverse( as.name( '!=' ) )
+#'     inverse( `==` )
+#'  } 
 
-# Before declaring a new generic function we check to see if it 
-# already exists.  
+#' @export
 inverse <- function(x, ... ) 
   UseMethod( 'inverse' ) 
 
+#' @export
 inverse.name <- function(x, ...) {
   
   op <- as.character(x)
@@ -30,8 +58,7 @@ inverse.name <- function(x, ...) {
 }
 
 
-# FUNCTION: inverse.function
-#  convert to name, find inverse, c:onvert to function.
+#' @export
 inverse.function <- function(x, ...) {
 
   inverses <- sapply( .Options$operators, function(x) x$inverse )
@@ -41,68 +68,3 @@ inverse.function <- function(x, ...) {
   return( NULL )
 
 }
-
-
-
-# setGeneric( 'inverse', function(x, ...) standardGeneric( 'inverse' ) )
-# 
-# 
-# setMethod( 'inverse', 'name', 
-#   function(x) {
-#     
-#     op <- as.character(x)
-#     inverses <- sapply( .Options$operators, function(x) x$inverse ) 
-# 
-#     if( op %in% names(inverses) ) {
-#       return( as.name( inverses[[ op ]] ))
-#     } else  {
-#       warning( "No inverse found for op: ", op, call.=FALSE )    
-#     }      
-#         
-#     return(NULL)
-#   }
-# )
-# 
-# 
-# setMethod( 'inverse', 'function',
-#   function(x) {
-# 
-#     inverses <- sapply( .Options$operators, function(x) x$inverse ) 
-# 
-#     return( inverses[[fun2name(x)]] )
-#     warning( "No operator matched" )
-#     return( NULL ) 
-#   }
-# )
-# 
-# 
-# 
-# 
-# # .inverse.many <- 
-# # setMethod( 'inverse', 'list', 
-# #  function(x) {
-# #
-# #    for( i in 1:length(x) )
-# #      x[[i]] <- inverse( x[[i]] )
-# #    
-# #    return(x)
-# #
-# #  }   
-# # )
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# # inverse( quote( A >  5 ) )
-# # inverse( quote( A >= 5 ) )
-# # inverse( quote( A <  5 ) )
-# # inverse( quote( A <= 5 ) )
-# # inverse( quote( A == 5 ) )
-# # inverse( quote( A != 5 ) )
-# # inverse( quote( A %in% lettters[1:5] ) )
-# # inverse( quote( A %!in% letters[1:5] ) )
-# 
-# 

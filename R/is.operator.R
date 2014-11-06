@@ -13,13 +13,17 @@
 #
 # ---------------------------------------------------------------------
 
+#' @export
 is.operator <- function(x,...) 
   UseMethod( 'is.operator', x ) 
 
 # DEFAULT: FALSE
+
+#' @export
 is.operator.default <- function(x, ... ) FALSE 
 
 # NAME:
+#' @export 
 is.operator.name <- function(x, ... ) {
   x <- as.character(x) 
 
@@ -32,6 +36,7 @@ is.operator.name <- function(x, ... ) {
 }  
 
 # FUNCTION: 
+#' @export
 is.operator.function <- function(x,...) 
 
   if( length(list(...)) > 0 ) {
@@ -49,4 +54,3 @@ is.operator.function <- function(x,...)
       function(op) identical( x, name2fun(op) )
     ) )  
   }      
-

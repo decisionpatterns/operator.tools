@@ -1,3 +1,6 @@
+ - Resolve name convention. Is it inverse, invert, complement? 
+   How does this work with formula.tools and venn?
+
  - There is some confusion about the SPECIAL CLASS of operators, ie. 
    registered, unregistered, etc., and it's type, i.e. logical arithmetic
    ...

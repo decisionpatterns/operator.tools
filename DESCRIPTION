@@ -1,9 +1,9 @@
 Package: operator.tools
 Type: Package
 Title: Utilities for working with R's operators
-Version: 1.4
-Date: 2014-11-05
-Author: Christopher Brown
+Version: 1.4.1
+Date: 2015-05-25
+Author: Decision Patterns 
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 Depends:
     utils
@@ -12,5 +12,5 @@ Suggests:
     magrittr,
     testthat
 Description: Utilities for working with R's operators
-License: GPL-2
+License: GPL-2 | file LICENSE
 URL: http://www.decisionpatterns.com/

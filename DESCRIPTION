@@ -1,7 +1,7 @@
 Package: operator.tools
 Type: Package
 Title: Utilities for working with R's operators
-Version: 1.4.1
+Version: 1.4.2
 Date: 2015-05-25
 Author: Decision Patterns 
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
@@ -14,3 +14,5 @@ Suggests:
 Description: Utilities for working with R's operators
 License: GPL-2 | file LICENSE
 URL: https://github.com/decisionpatterns/operator.tools
+BugReports: https://github.com/decisionpatterns/operator.tools/issues
+

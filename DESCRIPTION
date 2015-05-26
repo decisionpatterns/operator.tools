@@ -12,8 +12,8 @@ Suggests:
     magrittr,
     testthat
 Description: These utilities allow for programatically working with
-    R's operators: translating between an operator and its function,
-    inverting an operator, determining the operators type, etc.
+    R's operators: translating between an operator and its underlying 
+    function, inverting an operator, determining an operator's type, etc.
 License: GPL-2 | file LICENSE
 URL: https://github.com/decisionpatterns/operator.tools
 BugReports: https://github.com/decisionpatterns/operator.tools/issues

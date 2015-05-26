@@ -11,8 +11,8 @@ Suggests:
     operators,
     magrittr,
     testthat
-Description: This package contains utilities for programatically working with 
-    R's operators. Functions provide from translating between an operators 
+Description: This package contains utilities for programatically working with
+    R's operators. Functions provide from translating between an operators
     function and its name, getting the inverse of the operator, and determining
     its type.
 License: GPL-2 | file LICENSE

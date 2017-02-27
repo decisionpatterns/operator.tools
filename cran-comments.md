@@ -1,5 +1,15 @@
 ## Summary
 
+* Fix: 
+
+> Found the following (possibly) invalid URLs:
+>  URL: http://cran.r-project.org/doc/manuals/R-lang.html
+>    From: man/operators.Rd
+>    Status: 200
+>    Message: OK
+>    CRAN URL not in canonical form
+>  Canonical CRAN.R-project.org URLs use https.
+
 * Update release
 
 ## Test environments

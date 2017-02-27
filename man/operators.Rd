@@ -58,7 +58,7 @@ are not correctly identified as primitives or functions by the R language.
 
 }
 \references{
-\url{http://cran.r-project.org/doc/manuals/R-lang.html}
+\url{https://cran.r-project.org/doc/manuals/R-lang.html}
    \url{https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14310}
 }
 \seealso{

@@ -1,6 +1,6 @@
 # operator.tools
 
-# Utilities for working with R's operators
+## Utilities for working with R's operators
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/operator.tools)](https://cran.r-project.org/package=formula.tools)
 [![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html) 

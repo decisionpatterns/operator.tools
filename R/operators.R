@@ -58,7 +58,9 @@
 #'   operators( types='SPECIAL' )
 #'  }
 #'
+#' @import utils
 #' @export
+
 operators <- function( types="REGISTERED" ) {
 
   core <- names( .Options$operators )

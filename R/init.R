@@ -51,5 +51,20 @@
   setOperator( '%*%', type = 'matrix' )
   setOperator( '%x%', type = 'matrix' )
   setOperator( '%o%', type = 'matrix' )
+  
+  if( "package:magrittr" %in% search() ) {
+    setOperator( "%>%", type = "pipe") 
+    setOperator( "%<>%", type = "pipe")
+    setOperator( "%T>%", type = "pipe")
+  }
+  
+  if( "package:pipeR" %in% search() ) { 
+    setOperator( "%>>%", type="pipe")  
+  }
+  
+  if( "package:backpipe" %in% search() ) { 
+    setOperator( "%<%", type="pipe")  
+  }
+  
 
 }

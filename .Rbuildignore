@@ -4,3 +4,4 @@
 .*\.RProj.*
 ^.*\.Rproj$
 TODO.*
+^revdep$

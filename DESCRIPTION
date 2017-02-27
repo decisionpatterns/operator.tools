@@ -1,20 +1,26 @@
 Package: operator.tools
 Type: Package
 Title: Utilities for Working with R's Operators
-Version: 1.4.4
-Date: 2015-05-25
-Author: Decision Patterns 
-Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
-Depends:
-    utils
+Version: 1.6.0
+Date: 2017-02-25
+Authors@R: c(
+    person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", c("aut", "cre") ),
+    person("Decision Patterns", role = "cph")
+    )
+Imports:
+    utils (>= 3.3.2)
 Suggests:
-    operators,
-    magrittr,
-    testthat
-Description: These utilities allow for programatically working with
-    R's operators: translating between an operator and its underlying 
-    function, inverting an operator, determining an operator's type, etc.
+    operators (>= 0.1.8),
+    magrittr (>= 1.5),
+    testthat (>= 1.0.2)
+Description: This package provides an extensible collection of utilities for 
+    programatically working with operators that appear in language objects 
+    such as formulas, calls and expresions.  Various routines allow operations 
+    classifying and determining an operator type, translating between an 
+    operator and its underlying function, and inverting certain types of 
+    operators, etc. All of these can be applied to new/custom infix operators. 
 License: GPL-2 | file LICENSE
 URL: https://github.com/decisionpatterns/operator.tools
 BugReports: https://github.com/decisionpatterns/operator.tools/issues
-
+RoxygenNote: 6.0.1.9000
+Repository: CRAN

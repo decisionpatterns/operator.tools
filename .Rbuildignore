@@ -5,3 +5,5 @@
 ^.*\.Rproj$
 TODO.*
 ^revdep$
+^cran-comments\.md$
+^\.travis\.yml$

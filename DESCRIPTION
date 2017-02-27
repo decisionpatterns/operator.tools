@@ -14,11 +14,11 @@ Suggests:
     magrittr (>= 1.5),
     testthat (>= 1.0.2)
 Description: This package provides an extensible collection of utilities for 
-    programatically working with operators that appear in language objects 
-    such as formulas, calls and expresions.  Various routines allow operations 
-    classifying and determining an operator type, translating between an 
-    operator and its underlying function, and inverting certain types of 
-    operators, etc. All of these can be applied to new/custom infix operators. 
+    programming with operators that appear in language objects such as formulas,
+    calls and expressions. Various routines allow operations 
+    classifying operators, translating between an operator and its underlying 
+    function, and inverting some types of operators, etc. All methods 
+    can be extended to custom infix operators. 
 License: GPL-2 | file LICENSE
 URL: https://github.com/decisionpatterns/operator.tools
 BugReports: https://github.com/decisionpatterns/operator.tools/issues

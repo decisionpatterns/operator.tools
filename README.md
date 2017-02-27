@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html) 
 [![Downloads](https://cranlogs.r-pkg.org/badges/formula.tools?color=brightgreen)](https://www.r-pkg.org/pkg/formula.tools)
 
-This package provides an extensible collection of utilities for programatically working with operators that appear in language objects such as formulas, calls and expresions.  Various routines allow operations classifying and determining an operator type, translating between an operator and its underlying function, and inverting certain types of operators, etc. All of these can be applied to new/custom infix operators. 
+This package provides an extensible collection of utilities for programming with operators that appear in language objects such as formulas, calls and expressions. Various routines allow operations classifying operators, translating between an operator and its underlying function, and inverting some types of operators, etc. All methods can be extended to custom infix operators.
 
 
 ## Installation 

@@ -22,7 +22,7 @@ This package provides an extensible collection of utilities for programming with
 ## Important Functions 
 
 - **`operators`**: Get list of known operators
-- **'setOperator`**: Register a new type of operator
+- **`setOperator`**: Register a new type of operator
   - **`removeOperator`**: UNregister an operator
 - **`is.operator`**: Test if object is an operator
 - **`can.operator`**: Can object be coerced to an operator

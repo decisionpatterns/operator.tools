@@ -1,6 +1,7 @@
 library(testthat)
 library(operator.tools)
 
+test_that( 'opetators', {
 context( 'Function: is.operator' )
 for( op in operators() ) 
   expect_that( 
@@ -28,4 +29,4 @@ for( op in operators() )
     paste( op, 'was not successfully coerced to an operator.' )
   )
 
-
+})

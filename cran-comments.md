@@ -1,5 +1,10 @@
 ## Summary 
 
+* Fixed
+
+> The Description field should not start with the package name,
+>  'This package' or similar.
+
 * change onAttach to onLoad in zzz.R, Fix #1
 
 ## Test environments

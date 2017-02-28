@@ -1,8 +1,8 @@
 Package: operator.tools
 Type: Package
 Title: Utilities for Working with R's Operators
-Version: 1.6.2
-Date: 2017-02-2
+Version: 1.6.3
+Date: 2017-02-28
 Authors@R: c(
     person("Christopher", "Brown", , "chris.brown@decisionpatterns.com", c("aut", "cre") ),
     person("Decision Patterns", role = "cph")
@@ -13,12 +13,11 @@ Suggests:
     operators (>= 0.1.8),
     magrittr (>= 1.5),
     testthat (>= 1.0.2)
-Description: This package provides an extensible collection of utilities for 
-    programming with operators that appear in language objects such as formulas,
-    calls and expressions. Various routines allow operations 
-    classifying operators, translating between an operator and its underlying 
-    function, and inverting some types of operators, etc. All methods 
-    can be extended to custom infix operators. 
+Description: Provides a collection of utilities that allow programming with 
+    R's operators. Routines allow classifying operators, 
+    translating to and from an operator and its underlying function, and inverting 
+    some operators (e.g. comparison operators), etc. All methods can be extended
+    to custom infix operators. 
 License: GPL-2 | file LICENSE
 URL: https://github.com/decisionpatterns/operator.tools
 BugReports: https://github.com/decisionpatterns/operator.tools/issues

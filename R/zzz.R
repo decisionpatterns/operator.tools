@@ -1,6 +1,6 @@
   
 # .First.lib <- function( libname, pkgname ) {
-.onAttach <- function( libname, pkgname ) {
+.onLoad <- function( libname, pkgname ) {
 
   if( interactive() )
     packageStartupMessage( 

@@ -1,6 +1,6 @@
 # operator.tools 1.6.2
 
-* Change onAttach -> onLoad, Fixes #1
+* #1: Move .initOps to .onLoad. (Thanks, Hong-Revo) 
 
 # operator.tools 1.6.0
 

@@ -1,19 +1,8 @@
-## Summary
+## Summary 
 
-* Fix: 
-
-> Found the following (possibly) invalid URLs:
->  URL: http://cran.r-project.org/doc/manuals/R-lang.html
->    From: man/operators.Rd
->    Status: 200
->    Message: OK
->    CRAN URL not in canonical form
->  Canonical CRAN.R-project.org URLs use https.
-
-* Update release
+* change onAttach to onLoad in zzz.R, Fix #1
 
 ## Test environments
-
 * local OS X install, R 3.3.2
 * ubuntu 12.04 (on travis-ci), R 3.3.2
 * win-builder (devel and release)
